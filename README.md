@@ -10,23 +10,23 @@ This is a living document. I add to it as I build and ship.
 
 ### Always audit generated plans before building
 
-AI agents write ambitious plans that sound great on paper but hide real issues: missing dependencies, contradictory designs, architectural gaps between components. Before implementing anything, have the agent audit its own work — or better, have a separate agent review it with fresh eyes. I caught 100+ issues across 4 project plans by doing this. Things like async/sync mismatches, missing database models, and security holes that would have cost days to debug later.
+AI agents write ambitious plans that sound great on paper but hide real issues: missing dependencies, contradictory designs, architectural gaps between components. Before implementing anything, have the agent audit its own work  - or better, have a separate agent review it with fresh eyes. I caught 100+ issues across 4 project plans by doing this. Things like async/sync mismatches, missing database models, and security holes that would have cost days to debug later.
 
 ### Push back on ideas that aren't actually good
 
-When brainstorming with AI, don't accept the first suggestion. Ask "is this actually useful?" and "does something already do this?" Twice during project planning, I asked the agent whether the idea filled a real gap — and the research came back showing it genuinely did (and showing what already existed so we didn't reinvent the wheel). Conversely, pushing back on an initial concept ("it's not unique") led to a much stronger project idea.
+When brainstorming with AI, don't accept the first suggestion. Ask "is this actually useful?" and "does something already do this?" Twice during project planning, I asked the agent whether the idea filled a real gap  - and the research came back showing it genuinely did (and showing what already existed so we didn't reinvent the wheel). Conversely, pushing back on an initial concept ("it's not unique") led to a much stronger project idea.
 
-### Scope ruthlessly — the agent won't do it for you
+### Scope ruthlessly  - the agent won't do it for you
 
 AI will happily add features, personalities, modes, and integrations forever. You have to be the one who says "no, one voice, not four" or "keep it limited to what the model was trained on." Every feature the agent suggests sounds reasonable in isolation. Your job is to see the whole picture and cut what doesn't serve it.
 
 ### Verify before you trust the output
 
-When the agent says "this will work," ask it to prove it. Does GitPython actually return diffs for untracked files? (No, it doesn't.) Does a rolling average make sense for 3 data points? (No, it doesn't.) The agent is confident about things it's wrong about. Treat its technical claims like a coworker's — worth hearing, worth verifying.
+When the agent says "this will work," ask it to prove it. Does GitPython actually return diffs for untracked files? (No, it doesn't.) Does a rolling average make sense for 3 data points? (No, it doesn't.) The agent is confident about things it's wrong about. Treat its technical claims like a coworker's  - worth hearing, worth verifying.
 
 ### Use parallel agents for independent research, not for writing
 
-Spinning up 4 agents to research different things at the same time is great — results come back fast and each agent goes deep. Spinning up 4 agents to write giant documents at the same time hits token limits and creates more problems than it solves. Research in parallel, write sequentially.
+Spinning up 4 agents to research different things at the same time is great  - results come back fast and each agent goes deep. Spinning up 4 agents to write giant documents at the same time hits token limits and creates more problems than it solves. Research in parallel, write sequentially.
 
 ### Let the agent's mistakes teach you the domain
 
