@@ -30,7 +30,7 @@ Spinning up 4 agents to research different things at the same time is great  - r
 
 ### Let the agent's mistakes teach you the domain
 
-When auditing the WikiMod plan, the agent missed that Jigsaw models have identity term bias (flagging "I am a gay man" as toxic). I only learned this because I asked for a thorough audit and then checked what was missing. The gaps in the agent's knowledge became my learning opportunities.
+When auditing the [WikiMod](https://github.com/naeema-scopes/wikimod) plan, the agent missed that Jigsaw models have identity term bias (flagging "I am a gay man" as toxic). I only learned this because I asked for a thorough audit and then checked what was missing. The gaps in the agent's knowledge became my learning opportunities.
 
 ### Always test locally before pushing
 
