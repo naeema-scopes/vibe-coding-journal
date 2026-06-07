@@ -37,7 +37,3 @@ When auditing the WikiMod plan, the agent missed that Jigsaw models have identit
 It's tempting to let the agent write code and push it straight to GitHub. Don't. Run it locally first. Make sure tests pass, the app starts, and the thing actually works. The agent can write code that looks correct but breaks in ways you only discover by running it. Build the habit: local verification before every push.
 
 ---
-
-## What This Is
-
-Not a tutorial. Not a review of AI tools. Just honest notes from someone who uses these tools daily and pays attention to what actually helps vs. what just feels productive.
