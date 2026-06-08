@@ -36,4 +36,12 @@ When auditing the [WikiMod](https://github.com/naeema-scopes/wikimod) plan, the 
 
 It's tempting to let the agent write code and push it straight to GitHub. Don't. Run it locally first. Make sure tests pass, the app starts, and the thing actually works. The agent can write code that looks correct but breaks in ways you only discover by running it. Build the habit: local verification before every push.
 
+### Use skill systems to give agents structured workflows
+
+Raw AI agents will jump straight into writing code the moment you describe a problem. Skill systems (like [Superpowers](https://github.com/nickarella/superpowers) for Claude Code) change this by giving agents structured workflows they follow before touching code  - brainstorming before building, systematic debugging before guessing at fixes, writing plans before implementing, TDD before shipping. The difference is significant: instead of getting a wall of code that might solve your problem, the agent walks through a deliberate process. It brainstorms to understand what you actually want, writes a plan you can review, then implements against that plan with checkpoints. You can install skills that enforce things like "always run tests before claiming something works" or "always audit your own plan before executing." The agent stops winging it and starts following discipline. You're essentially giving the agent good engineering habits it wouldn't have on its own.
+
+### Add an AGENTS.md to set your explanation level
+
+Here's an idea I haven't seen anyone do yet but think would be valuable: an `AGENTS.md` file (or a section in `CLAUDE.md` / project config) where you declare your experience level or preferred explanation depth, and every agent in the project respects it. Something like setting `level: beginner` or `age: 12` or `experience: junior-developer`, and having the agent automatically adjust how it explains things  - simpler language, more context, step-by-step breakdowns, avoiding jargon or defining it when used. The inverse works too: a senior engineer could set `level: expert` and skip the hand-holding. Right now you have to ask "explain this like I'm new to coding" every single time, and it resets every conversation. Baking it into the project config means the agent just knows. This would be huge for learning  - imagine a student forking a repo that already has `AGENTS.md` set to their level, and every AI interaction in that codebase meets them where they are. No prompt engineering required, just a config file.
+
 ---
